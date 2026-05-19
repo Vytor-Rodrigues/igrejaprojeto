@@ -1,11 +1,62 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <title>Igreja — Início</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
 <body>
-    
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="teste.html">Casa de Oração</a>
+            <nav class="nav" id="nav">
+                <a class="nav-link active" href="#">Início</a>
+                <a class="nav-link" href="https://www.youtube.com/@MinisterioCasadeOra%C3%A7%C3%A3o-h4i" target="_blank">
+                    <img class="nav-separator" src="img/YouTube_full-color_icon_(2017).svg.png" alt="YouTube" width="30" height="20">
+                </a>
+            </nav>
+            <button id="menuBtn" class="menu-btn" aria-label="Abrir menu">☰</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-inner">
+                <h1>Bem-vindo à Casa de Oração</h1>
+                <p class="tagline">Um lugar para fé, comunidade e esperança.</p>
+                <a class="btn" href="#about">Saiba mais</a>
+            </div>
+        </section>
+
+        <section id="about" class="about container">
+            <h2>Sobre Nós</h2>
+            <p>Somos uma comunidade acolhedora que se reúne para adorar, aprender e servir. Todos são bem-vindos.</p>
+
+            <div class="cards">
+                <div class="card">
+                    <h3>Cultos</h3>
+                    <p>Domingo — 9:00 e 18:00</p>
+                </div>
+                <div class="card">
+                    <h3>Local</h3>
+                    <p>Rua da Esperança, 123</p>
+                </div>
+                <div class="card">
+                    <h3>Contato</h3>
+                    <p>contato@igrejaexemplo.org</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>© <span id="year"></span> Igreja Exemplo — Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,62 +1,215 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Igreja — Início</title>
-    <link rel="stylesheet" href="style.css">
-    </head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Casa de Oração</title>
+
+  <!-- Fonte moderna: Poppins (Google Fonts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Folha de estilos principal -->
+  <link rel="stylesheet" href="style.css">
+</head>
 <body>
 
-    <header class="site-header">
-        <div class="container header-inner">
-            <a class="brand" href="teste.html">Casa de Oração</a>
-            <nav class="nav" id="nav">
-                <a class="nav-link active" href="#">Início</a>
-                <a class="nav-link" href="https://www.youtube.com/@MinisterioCasadeOra%C3%A7%C3%A3o-h4i" target="_blank">
-                    <img class="nav-separator" src="img/YouTube_full-color_icon_(2017).svg.png" alt="YouTube" width="30" height="20">
-                </a>
-            </nav>
-            <button id="menuBtn" class="menu-btn" aria-label="Abrir menu">☰</button>
+  <!-- ============================================================
+       CABEÇALHO (HEADER)
+       Fixo no topo da página; ganha sombra ao rolar via JS
+       ============================================================ -->
+  <header class="header" id="header">
+    <div class="container header-inner">
+
+      <!-- Logo: ícone de cruz SVG + nome da igreja -->
+      <a class="logo" href="#inicio">
+     <!-- <svg class="logo-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M12 2V22M7 7H17" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+        </svg> -->
+        <img src="img/logo.png" alt="Logo da Casa de Oração" width="70" height="70">
+        Casa de Oração
+      </a>
+
+      <!-- Navegação principal (visível no desktop) -->
+      <nav class="nav" id="nav" aria-label="Menu principal">
+        <a class="nav-link" href="#inicio">Início</a>
+        <a class="nav-link" href="#sobre">Sobre</a>
+
+        <!-- Link externo: canal do YouTube -->
+        <a class="nav-link nav-youtube"
+           href="https://www.youtube.com/@MinisterioCasadeOra%C3%A7%C3%A3o-h4i"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="Canal no YouTube">
+          <img src="img/YouTube_full-color_icon_(2017).svg.png" alt="YouTube" width="28" height="20">
+        </a>
+      </nav>
+
+      <!-- Botão hamburguer: visível apenas em telas pequenas (mobile) -->
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false">
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+      </button>
+
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- ============================================================
+         SEÇÃO INÍCIO (HERO)
+         Cor de fundo: cinza escuro (#1a1a1a)
+         Ocupa toda a altura da tela (100vh)
+         ============================================================ -->
+<section style="background-image: url('img/igreja1a.jpeg'); height: 100vh; background-size: cover; background-position: top;" id="inicio">
+      <div class="container inicio-inner">
+
+        <div class="inicio-content">
+
+          <!-- Etiqueta pequena acima do título principal -->
+          <span class="inicio-label">Bem-vindo</span>
+
+          <!-- Título grande com tamanho responsivo via clamp() -->
+          <h1 class="inicio-title">
+            Casa de<br>
+            <span class="titulo-destaque">Oração</span>
+          </h1>
+
+          <!-- Tagline: frase curta de apresentação -->
+          <p class="inicio-tagline">
+            Um lugar para fé, comunidade e esperança.<br>
+            Todos são bem-vindos aqui.
+          </p>
+
+          <!-- Botões de chamada para ação (CTA) -->
+          <div class="inicio-actions">
+            <a class="btn btn-primary" href="#sobre">Conheça nossa história</a>
+            <a class="btn btn-outline"
+               href="https://www.youtube.com/@MinisterioCasadeOra%C3%A7%C3%A3o-h4i"
+               target="_blank"
+               rel="noopener noreferrer">
+              Assista online
+            </a>
+          </div>
+
         </div>
-    </header>
 
-    <main>
-        <section class="hero">
-            <div class="container hero-inner">
-                <h1>Bem-vindo à Casa de Oração</h1>
-                <p class="tagline">Um lugar para fé, comunidade e esperança.</p>
-                <a class="btn" href="#about">Saiba mais</a>
-            </div>
-        </section>
-
-        <section id="about" class="about container">
-            <h2>Sobre Nós</h2>
-            <p>Somos uma comunidade acolhedora que se reúne para adorar, aprender e servir. Todos são bem-vindos.</p>
-
-            <div class="cards">
-                <div class="card">
-                    <h3>Cultos</h3>
-                    <p>Domingo — 9:00 e 18:00</p>
-                </div>
-                <div class="card">
-                    <h3>Local</h3>
-                    <p>Rua da Esperança, 123</p>
-                </div>
-                <div class="card">
-                    <h3>Contato</h3>
-                    <p>contato@igrejaexemplo.org</p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="site-footer">
-        <div class="container footer-inner">
-            <p>© <span id="year"></span> Igreja Exemplo — Todos os direitos reservados</p>
+        <!-- Indicador de scroll: bolinha animada que sinaliza "role para baixo" -->
+        <div class="scroll-indicator" aria-hidden="true">
+          <span class="scroll-dot"></span>
         </div>
-    </footer>
 
-    <script src="script.js"></script>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         SEÇÃO SOBRE
+         Cor de fundo: cinza claro (#f0f0f0)
+         ============================================================ -->
+    <section class="section-sobre" id="sobre">
+      <div class="container">
+
+        <!-- Cabeçalho da seção: etiqueta + título + texto descritivo -->
+        <div class="section-header">
+          <span class="section-label">Quem somos</span>
+          <h2 class="section-title">Sobre Nós</h2>
+          <p class="section-desc">
+            Somos uma comunidade acolhedora que se reúne para adorar, aprender e servir.
+            Acreditamos que cada pessoa tem um propósito e queremos caminhar junto com você.
+          </p>
+        </div>
+
+        <!-- Grade de três cards informativos
+             data-animate: atributo lido pelo JS para animar a entrada dos cards -->
+        <div class="cards-grid">
+
+          <!-- Card: Horários de culto -->
+          <div class="card" data-animate>
+            <div class="card-icon" aria-hidden="true">
+              <!-- Ícone: calendário -->
+              <svg viewBox="0 0 24 24" fill="none">
+                <rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M3 9H21M8 2V6M16 2V6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <circle cx="12" cy="15" r="1.5" fill="currentColor"/>
+              </svg>
+            </div>
+            <h3 class="card-title">Cultos</h3>
+            <p class="card-text">Domingo — 9h e 18h<br>Quarta-feira — 19h30</p>
+          </div>
+
+          <!-- Card: Endereço -->
+          <div class="card" data-animate>
+            <div class="card-icon" aria-hidden="true">
+              <!-- Ícone: marcador de mapa -->
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 21C12 21 5 14 5 9C5 5.13 8.13 2 12 2C15.87 2 19 5.13 19 9C19 14 12 21 12 21Z"
+                      stroke="currentColor" stroke-width="1.8"/>
+                <circle cx="12" cy="9" r="3" stroke="currentColor" stroke-width="1.8"/>
+              </svg>
+            </div>
+            <h3 class="card-title">Local</h3>
+            <p class="card-text">Rua da Esperança, 123<br>Sua cidade — SP</p>
+          </div>
+
+          <!-- Card: Contato -->
+          <div class="card" data-animate>
+            <div class="card-icon" aria-hidden="true">
+              <!-- Ícone: envelope de e-mail -->
+              <svg viewBox="0 0 24 24" fill="none">
+                <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M3 7L12 13L21 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="card-title">Contato</h3>
+            <p class="card-text">contato@casadeoração.org<br>(11) 99999-9999</p>
+          </div>
+
+        </div><!-- /cards-grid -->
+
+        <!-- Bloco de versículo bíblico com fundo escuro para destaque visual -->
+        <div class="quote-block">
+          <blockquote>
+            "Porque onde dois ou três estiverem reunidos em meu nome,
+            ali estou no meio deles."
+          </blockquote>
+          <cite>— Mateus 18:20</cite>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ============================================================
+       RODAPÉ (FOOTER)
+       Cor de fundo: cinza escuro (#2c2c2c)
+       ============================================================ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+
+      <!-- Copyright com o ano preenchido dinamicamente pelo JavaScript -->
+      <p>© <span id="year"></span> Casa de Oração — Todos os direitos reservados</p>
+
+      <!-- Ícone do YouTube no rodapé -->
+      <a class="footer-youtube"
+         href="https://www.youtube.com/@MinisterioCasadeOra%C3%A7%C3%A3o-h4i"
+         target="_blank"
+         rel="noopener noreferrer"
+         aria-label="Acesse nosso canal no YouTube">
+        <img src="img/YouTube_full-color_icon_(2017).svg.png" alt="YouTube" width="24" height="17">
+      </a>
+
+    </div>
+  </footer>
+
+
+  <!-- Script carregado no final do body para não bloquear a renderização da página -->
+  <script src="script.js"></script>
+
 </body>
 </html>

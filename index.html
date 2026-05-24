@@ -34,17 +34,22 @@
       <!-- Navegação principal (visível no desktop) -->
       <nav class="nav" id="nav" aria-label="Menu principal">
         <a class="nav-link" href="#inicio">Início</a>
+        <a href="#quem-somos" class="nav-link">
+    Quem Somos
+</a>
         <a class="nav-link" href="#sobre">Sobre</a>
+        
 
         <!-- Link externo: canal do YouTube -->
-        <a class="nav-link nav-youtube"
+         <!-- Ícone antigo do YouTube removido do topo do footer -->
+        <!--<a class="nav-link nav-youtube"
            href="https://www.youtube.com/@MinisterioCasadeOra%C3%A7%C3%A3o-h4i"
            target="_blank"
            rel="noopener noreferrer"
            aria-label="Canal no YouTube">
           <img src="img/YouTube_full-color_icon_(2017).svg.png" alt="YouTube" width="28" height="20">
         </a>
-      </nav>
+      </nav-->
 
       <!-- Botão hamburguer: visível apenas em telas pequenas (mobile) -->
       <button class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false">
@@ -64,7 +69,7 @@
          Cor de fundo: cinza escuro (#1a1a1a)
          Ocupa toda a altura da tela (100vh)
          ============================================================ -->
-<section style="background-image: url('img/igreja1a.jpeg'); height: 100vh; background-size: cover; background-position: top;" id="inicio">
+<section style="background-image: url('img/igreja8.png'); height: 100vh; background-size: cover; background-position: top;" id="inicio">
       <div class="container inicio-inner">
 
         <div class="inicio-content">
@@ -105,11 +110,63 @@
       </div>
     </section>
 
+<!-- =========================================================
+     SEÇÃO QUEM SOMOS
+     Carrossel de fotos da igreja
+     ========================================================= -->
+<section class="section-quem-somos" id="quem-somos">
 
+    <div class="container">
+
+        <!-- Cabeçalho da seção -->
+        <div class="section-header">
+
+            <span class="section-label">
+                CONHEÇA NOSSA IGREJA
+            </span>
+
+            <h2 class="section-title">
+                Quem Somos
+            </h2>
+
+            <p class="section-desc">
+                Um lugar de fé, comunhão e adoração.
+            </p>
+</div>
+
+            <!-- Botões -->
+            <button class="carrossel-btn prev">
+                ❮
+            </button>
+
+            <button class="carrossel-btn next">
+                ❯
+            </button>
+
+        </div>
+        </div>
+
+        <!-- Carrossel -->
+        <div class="carrossel">
+
+            <!-- Imagens -->
+            <div class="carrossel-imagens">
+
+                <img src="img/igreja2 .jpeg" class="carrossel-img active">
+
+                <img src="img/igreja3.jpeg" class="carrossel-img">
+
+                <img src="img/igreja4.jpeg" class="carrossel-img">
+
+            
+    </div>
+
+</section>
     <!-- ============================================================
          SEÇÃO SOBRE
          Cor de fundo: cinza claro (#f0f0f0)
          ============================================================ -->
+         
     <section class="section-sobre" id="sobre">
       <div class="container">
 
@@ -138,35 +195,118 @@
               </svg>
             </div>
             <h3 class="card-title">Cultos</h3>
-            <p class="card-text">Domingo — 9h e 18h<br>Quarta-feira — 19h30</p>
+            <p class="card-text">Domingo — 19:30h  <br>Quarta-feira — 20:00</p>
           </div>
 
           <!-- Card: Endereço -->
           <div class="card" data-animate>
-            <div class="card-icon" aria-hidden="true">
-              <!-- Ícone: marcador de mapa -->
-              <svg viewBox="0 0 24 24" fill="none">
-                <path d="M12 21C12 21 5 14 5 9C5 5.13 8.13 2 12 2C15.87 2 19 5.13 19 9C19 14 12 21 12 21Z"
-                      stroke="currentColor" stroke-width="1.8"/>
-                <circle cx="12" cy="9" r="3" stroke="currentColor" stroke-width="1.8"/>
-              </svg>
-            </div>
-            <h3 class="card-title">Local</h3>
-            <p class="card-text">Rua da Esperança, 123<br>Sua cidade — SP</p>
-          </div>
 
-          <!-- Card: Contato -->
-          <div class="card" data-animate>
-            <div class="card-icon" aria-hidden="true">
-              <!-- Ícone: envelope de e-mail -->
-              <svg viewBox="0 0 24 24" fill="none">
+  <div class="card-icon" aria-hidden="true">
+
+    <!-- Link que leva para o Google Maps -->
+    <a href="https://www.google.com/maps/place/Av.+Dezessete+de+Setembro,+797+-+Aparecida,+Alvorada+-+RS,+94853-160/@-30.0214354,-51.0664243,17z/data=!3m1!4b1!4m6!3m5!1s0x95197587c2aaea83:0x52d051b4fc331792!8m2!3d-30.0214401!4d-51.0638494!16s%2Fg%2F11wb1wlb2n?entry=ttu&g_ep=EgoyMDI2MDUxNy4wIKXMDSoASAFQAw%3D%3D"
+    target="_blank">
+
+      <!-- Ícone: marcador de mapa -->
+      <svg viewBox="0 0 24 24" fill="none">
+
+        <path d="M12 21C12 21 5 14 5 9C5 5.13 8.13 2 12 2C15.87 2 19 5.13 19 9C19 14 12 21 12 21Z"
+        stroke="currentColor" stroke-width="1.8"/>
+
+        <circle cx="12" cy="9" r="3"
+        stroke="currentColor"
+        stroke-width="1.8"/>
+
+      </svg>
+
+    </a>
+
+  </div>
+
+  <h3 class="card-title">Local</h3>
+
+  <p class="card-text">
+    Av 17 de Setembro, 797<br>
+    Alvorada — RS
+  </p>
+
+</div>
+
+          <!-- Card: Redes Sociais -->
+<div class="card" data-animate>
+
+    <!-- Ícone do card -->
+    <div class="card-icon" aria-hidden="true">
+
+        <!-- Ícone de compartilhamento/redes -->
+        <svg viewBox="0 0 24 24" fill="none">
+
+            <path d="M18 8A3 3 0 1 0 15 5A3 3 0 0 0 18 8Z"
+            stroke="currentColor"
+            stroke-width="1.8"/>
+
+            <path d="M6 14A3 3 0 1 0 3 11A3 3 0 0 0 6 14Z"
+            stroke="currentColor"
+            stroke-width="1.8"/>
+
+            <path d="M18 22A3 3 0 1 0 15 19A3 3 0 0 0 18 22Z"
+            stroke="currentColor"
+            stroke-width="1.8"/>
+
+            <path d="M8.59 12.51L15.42 16.49"
+            stroke="currentColor"
+            stroke-width="1.8"/>
+
+            <path d="M15.41 7.51L8.59 11.49"
+            stroke="currentColor"
+            stroke-width="1.8"/>
+
+        </svg>
+
+    </div>
+
+    <!-- Título -->
+    <h3 class="card-title">Nossas redes</h3>
+
+    <!-- Área das redes sociais -->
+    <div class="redes-sociais">
+
+        <!-- Instagram -->
+        <a href="https://instagram.com/ministeriocasadeoracao_/"
+        target="_blank">
+
+            <img src="img/instagram.png"
+            style="width: 35px;">
+
+        </a>
+
+        <!-- YouTube -->
+        <a href="https://youtube.com/@MinisterioCasadeOração-h4i"
+        target="_blank">
+
+            <img src="img/YouTube_full-color_icon_(2017).svg.png"
+            style="width: 40px;">
+
+        </a>
+
+        <!-- Facebook -->
+        <a href="https://facebook.com/casaadeoracao/?locale=pt_BR"
+        target="_blank">
+
+            <img src="img/facebook.png"
+            style="width: 35px;">
+
+        </a>
+
+    </div>
+
+</div>
+            
                 <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.8"/>
                 <path d="M3 7L12 13L21 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
               </svg>
             </div>
-            <h3 class="card-title">Contato</h3>
-            <p class="card-text">contato@casadeoração.org<br>(11) 99999-9999</p>
-          </div>
+            
 
         </div><!-- /cards-grid -->
 

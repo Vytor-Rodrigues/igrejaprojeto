@@ -156,3 +156,61 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
 });
+// ======================================================
+// CARROSSEL AUTOMÁTICO
+// ======================================================
+
+// Seleciona todas as imagens
+const imagens = document.querySelectorAll('.carrossel-img');
+
+// Índice da imagem atual
+let index = 0;
+
+// Função para mostrar imagem
+function mostrarImagem(i) {
+
+    // Remove active de todas
+    imagens.forEach(img => {
+        img.classList.remove('active');
+    });
+
+    // Ativa imagem atual
+    imagens[i].classList.add('active');
+}
+
+// Próxima imagem
+function proximaImagem() {
+
+    index++;
+
+    // Reinicia ao chegar na última
+    if(index >= imagens.length) {
+        index = 0;
+    }
+
+    mostrarImagem(index);
+}
+
+// Imagem anterior
+function imagemAnterior() {
+
+    index--;
+
+    // Volta para última
+    if(index < 0) {
+        index = imagens.length - 1;
+    }
+
+    mostrarImagem(index);
+}
+
+// Clique botão próximo
+document.querySelector('.next')
+.addEventListener('click', proximaImagem);
+
+// Clique botão anterior
+document.querySelector('.prev')
+.addEventListener('click', imagemAnterior);
+
+// Troca automática a cada 4 segundos
+setInterval(proximaImagem, 5000);

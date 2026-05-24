@@ -489,13 +489,15 @@ a {
 .card-icon svg {
   width: 22px;
   height: 22px;
-}
+  }
 
 /* Título do card */
 .card-title {
   font-size: 1rem;
   font-weight: 600;
   color: var(--gray-900);
+  align-items: center;
+text-align: center;
 }
 
 /* Texto informativo do card */
@@ -503,6 +505,8 @@ a {
   font-size: 0.88rem;
   color: var(--gray-600);
   line-height: 1.75;
+  align-items: center;
+text-align: center;
 }
 
 /* Bloco de citação bíblica com fundo escuro para contraste visual */
@@ -639,4 +643,99 @@ a {
   .btn {
     width: 100%;
   }
+}/* Área das redes sociais */
+.redes-sociais {
+
+  /* Coloca os logos lado a lado */
+  display: flex;
+
+  /* Centraliza horizontalmente */
+  justify-content: center;
+
+  /* Centraliza verticalmente */
+  align-items: center;
+
+  /* Espaço entre os logos */
+  gap: 20px;
+
+  /* Ocupa toda a largura */
+  width: 100%;
+
+  /* Empurra os logos para baixo */
+  margin-top: 10px;
+
+}
+/* Área das imagens */
+.carrossel-imagens {
+
+  position: relative;
+  width: 100%;
+  height: 450px;
+
+}
+
+/* Imagens */
+.carrossel-img {
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  border-radius: 20px;
+
+  opacity: 0;
+
+  transition: opacity 1.5s ease-in-out;
+  overflow: visible;
+
+}
+
+/* Imagem ativa */
+.carrossel-img.active {
+
+  opacity: 1;
+
+}
+/* Botões */
+.carrossel-btn {
+
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  background: rgba(0,0,0,0.5);
+  color: white;
+
+  border: none;
+
+  width: 50px;
+  height: 50px;
+
+  cursor: pointer;
+
+  border-radius: 50%;
+
+  font-size: 22px;
+
+  z-index: 10;
+  
+}
+
+/* Botão esquerdo */
+.prev {
+
+  left: -70px;
+
+}
+
+/* Botão direito */
+.next {
+
+
+  right: -70px;
 }
